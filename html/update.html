@@ -1,0 +1,41 @@
+<main class="container">
+<div class="row">
+		<h3>Modificar version</h3>
+</div>
+<form enctype="multipart/form-data" method="post" action="pro_update.php">
+<div class="row">
+				
+			   	<div class="input-field col s12 m12 l12">
+	          		<input name="filez[]"  type="file" >	
+	          	</div>
+</div>	
+<div class="row">	          		    
+	          	<div class="input-field col s12 m12 l12">
+		          	<i class="material-icons prefix">mode_edit</i>
+		            <textarea id="descripcion_ver" class="materialize-textarea" name="descripcion_ver" length="<?php echo $lentextarea;?>"><?php echo $ver_file->descripcion;?>
+		            	
+		            </textarea>
+		            <label for="descripcion_ver">Descipción de version</label>
+	          	</div>
+	          	<div class="input-field col s12 m12 l12 hide">
+		          	<input type="text" name="id" value="<?php echo $ver_file->id;?>">
+	          	</div>
+	          	<div class="input-field col s12 m12 l12 hide">	          		
+		          	<input type="text" name="nameFile" value="<?php echo $nameFile;?>">
+	          	</div>
+
+</div>
+<div class="row">
+	        	
+			  	<div class="input-field col s12 m12 l12">
+				    <select  id="sistemaContent" class="browser-default" name="sistema_update" data-sistema="<?php echo $sistema;?>">
+						
+					</select>
+					
+		  		</div>
+</div>				
+<input type="submit" value="Subir_Log" class="btn">
+</form>
+<a  href="v.php" class="waves-effect waves-light btn">Volver</a>
+</div>
+</main>

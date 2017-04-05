@@ -1,0 +1,47 @@
+<main class="container">
+		<!-- seccion de botones-->
+        <section class="row">
+            <h4> Modificar Usuario</h4>
+           <form id="formUser" enctype="multipart/form-data" >
+                                        <!-- id -->
+                                        <div class="input-field col s12 m12 l12 hide">
+                                            <input name="id_usuario"  value="<?php echo $id?>">
+                                        </div>
+
+                                        <div class="input-field col s12 m12 l12">
+                                            <label for="nombre_usuario">Nombre usuario*</label>
+                                            <input id="nombre_usuario" placeholder="" name="nombre_usuario" type="text" data-error=".errorTxt1" value="<?php echo $usuario?>">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                        <div class="input-field col s12 m12 l12">
+                                            <label for="contraseña_usuario">Contraseña usuario*</label>
+                                            <input id="contraseña_usuario" placeholder="" name="contraseña_usuario" type="text" data-error=".errorTxt2" value="<?php echo $password?>">
+                                            <div class="errorTxt2"></div>
+                                        </div>
+                                        <div class="input-field col s12 m12 l12">
+                                            <label for="email_usuario">Email*</label>
+                                            <input id="email_usuario" placeholder="" name="email_usuario" type="text" data-error=".errorTxt3" value="<?php echo $email?>"
+                                            <div class="errorTxt3"></div>
+                                        </div>
+                                        <div class="input-field col s12 m12 l12">
+                                             <div class="switch">
+                                                <label>
+                                                  Administrador
+                                                  <input type="checkbox" id="privilegio" <?php echo $privilegio?>>
+                                                  <span class="lever"></span>
+                                                  Noob
+                                                </label>
+                                              </div>
+                                        </div>
+
+                                                                   
+
+            </form>
+        </section>
+        <br><br>
+        <section class="row">
+            <a class="waves-effect waves-light btn " name="update_user">Actualizar</a>
+            <a class="waves-effect waves-light btn" href="http://localhost:8088/snorsoft/Utilities/admin_users.php">volver</a>
+        </section>
+        
+</main>

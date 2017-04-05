@@ -1,0 +1,61 @@
+<main class="container">
+	 <section class="row">          
+          
+          	
+    </section>
+
+    <!-- cuerpo del formulario -->
+    <section class="row"> 
+                 <h4> Cargar Documento</h4> 
+                <div class="row">
+                <form id="formDocs"  class="col s12">
+                                  <div class="input-field col s12">
+                                    <label for="titulo_doc">Titulo documento*</label>
+                                    <input id="titulo_doc" placeholder=""   type="text" name="titulo_doc" data-error=".errorTxt2">
+                                    <div class="errorTxt2"></div>
+                                  </div> 
+                                  <div class="input-field col s12">
+                                      <label for="etiqueta_doc">Etiqueta Documento*</label>
+                                      <input id="etiqueta_doc" placeholder="" name="etiqueta_doc" type="text" data-error=".errorTxt1">
+                                      <div class="errorTxt1"></div>
+                                  </div>
+                                  <div class="input-field col s12">
+                                      <textarea id="descripcion_doc" name="descripcion_doc" class="materialize-textarea validate"  length="1000" data-error=".errorTxt7"></textarea>
+                                      <label for="descripcion_doc">Descripcion documento*</label>
+                                      <div class="errorTxt7"></div>
+                                  </div>
+                                  <div class="input-field col s12">
+                                    <label for="fecha_doc" class="">fecha Documento*</label>
+                                    <input id="fecha_doc" name="fecha_doc" type="date" class="datepicker">
+                                  </div>
+                                  <div class="input-field col s12">
+                                    <label for="doc_" class="">Documento*</label>
+                                    <br>
+                                    <br>
+                                    <input id="doc_" name="doc_[]" required=""  accept=".rar" type="file" />
+                                  </div>
+
+                    </form> 
+                    </div><!-- end row -->
+
+
+        <!-- buttons for actions -->
+        <div>
+          <a class="waves-effect waves-light btn" name="subir_doc" >subir</a>
+          <a class="waves-effect waves-light btn">volver</a>
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal LoadModal">
+            <div class="modal-content">
+              <h4>Cargando</h4>
+              <img src="img/loading.gif" class="responsive-img">
+            </div>
+            <div class="modal-footer">
+              
+            </div>
+          </div>
+          <!-- end modal -->
+        </div>
+    </section>
+    
+
+</main>

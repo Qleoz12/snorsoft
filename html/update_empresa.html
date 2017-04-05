@@ -1,0 +1,56 @@
+<main class="container">
+		<!-- seccion de botones-->
+        <section class="row">
+            <h4> Modificar Empresas</h4>
+           <form id="formEmpresa" enctype="multipart/form-data" >
+                                        <!-- id -->
+                                        <div class="input-field col s12 m12 l12 hide">
+                                            <input name="id_empresas"  value="<?php echo $id?>">
+                                        </div>
+
+                                        <div class="input-field col s12 m12 l12">
+                                            <label for="nombre_empresas">Nombre empresas*</label>
+                                            <input id="nombre_empresas" placeholder="" name="nombre_empresas" type="text" data-error=".errorTxt1" value="<?php echo $empresa?>">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                    
+                                        <div class="input-field col s12 m12 l12">
+                                            <label for="nit_empresas">Nit*</label>
+                                            <input id="nit_empresas" placeholder="" name="nit_empresas" type="text" data-error=".errorTxt3" value="<?php echo $nit?>"
+                                            <div class="errorTxt3"></div>
+                                        </div>
+                                        <div class="col s12">
+                                              <label for="sistema_f#">Financiero*</label>
+                                              <select class="error browser-default" id="slctFnncr" name="sistema_f#" data-setted="<?php echo $financiero?>" data-error=".errorTxt6">
+                                              </select>
+                                              <div class="input-field">
+                                                  <div class="errorTxt6"></div>
+                                              </div>
+                                        </div>
+                                        <div class="col s12">
+                                              <label for="sistema_c#">Comercial*</label>
+                                              <select class="error browser-default" id="slctCmrcl" data-setted="<?php echo $comercial?>" name="sistema_c#" data-error=".errorTxt7">
+                                              </select>
+                                              <div class="input-field">
+                                                  <div class="errorTxt7"></div>
+                                              </div>
+                                        </div>
+                                        <div class="col s12">
+                                              <label for="pago#">Pago*</label>
+                                              <select class="error browser-default" id="slctpaid" name="pago#"  data-setted="<?php echo $pago?>" data-error=".errorTxt7">
+                                              </select>
+                                              <div class="input-field">
+                                                  <div class="errorTxt7"></div>
+                                              </div>
+                                        </div>
+
+                                        
+            </form>
+        </section>
+        <br><br>
+        <section class="row">
+            <a class="waves-effect waves-light btn " name="update_empresas">Actualizar</a>
+            <a class="waves-effect waves-light btn" href="http://localhost:8088/snorsoft/Utilities/act_empresas.php">volver</a>
+        </section>
+        
+</main>

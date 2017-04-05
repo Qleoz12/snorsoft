@@ -1,0 +1,85 @@
+<main class="container">
+	 <section class="row">          
+          
+          	
+    </section>
+
+    <!-- cuerpo del formulario -->
+    <section class="row"> 
+                <div class="row">
+                <form id="formValidate" enctype="multipart/form-data"  multipart/form-data class="col s12">
+                  
+                                        <div class="input-field col s12">
+                                            <label for="nombre_error">Nombre Error*</label>
+                                            <input id="nombre_error" placeholder="" name="nombre_error" type="text" data-error=".errorTxt1">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <label for="E_error">Etiqueta Error*</label>
+                                          <input id="E_error" placeholder=""   type="text" name="E_error" data-error=".errorTxt2">
+                                          <div class="errorTxt2"></div>
+                                        </div>
+                                        <div class="col s12">
+                                              <label for="log_sistema">Sistema*</label>
+                                              <select class="error browser-default" id="sistemaContent" name="log_sistema" data-error=".errorTxt6">
+                                                
+                                              </select>
+                                              <div class="input-field">
+                                                  <div class="errorTxt6"></div>
+                                              </div>
+                                        </div> 
+                                        <div class="input-field col s12">
+                                            <textarea id="log_descrip" name="log_descrip" class="materialize-textarea validate"  length="1000" data-error=".errorTxt7"></textarea>
+                                            <label for="log_descrip">Descripcion*</label>
+                                            <div class="errorTxt7"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <label for="fecha_error" class="">fecha de error*</label>
+                                          <input id="fecha_error" name="fecha_error" type="date" class="datepicker">
+                                        </div>
+
+
+                                        <!-- imagenes cargadas del log -->
+                                        <div class="material-placeholder">
+                                            <label>Cargar Imagen de Error... </label>
+                                            <h5>Cargar Imagen de Error...</h5>
+                                            <input type="file" name="images[]" id="images" multiple>
+                                            <hr>
+                                            <div id="images-to-upload" name="images-to-upload" class="col s12 ignored">
+                                            </div><!-- end #images-to-upload -->
+                                            <hr>
+                                        </div><!-- end .container -->
+                    </form> 
+                    </div><!-- end row -->
+
+
+        <!-- buttons for actions -->
+        <div>
+          <a class="waves-effect waves-light btn" name="subir_log" >subir</a>
+          <a class="waves-effect waves-light btn">volver</a>
+        </div>
+    </section>
+    
+
+</main>
+
+<!-- 
+<footer class="page-footer blue darken-2">
+          
+
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright DeyvidInc
+            <a class="grey-text text-lighten-4 right" href="#!">Algo mas aqui!!!</a>
+            </div>
+          </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/materialize-pagination.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/init.js"></script>
+</body>
+</html> -->

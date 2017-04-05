@@ -1,0 +1,46 @@
+	<main class="container">
+	<div class="row">
+		<h3>Subir nueva version</h3>
+		<form id="FormVersion" enctype="multipart/form-data">
+			<p><i class="Small material-icons">warning</i>Solo se acepta un archivo de tipo rar, por lo cual debe tener instalado <a href="https://www.winrar.es/descargas">winrar</a></p>
+			<input name="filez[]" required=""  accept=".rar" type="file" />		
+	          	<br>
+	          	<br>
+	          	<div class="input-field col s12 m12 l12">
+		          	<i class="material-icons prefix">mode_edit</i>
+		            <textarea id="descripcion_ver" class="materialize-textarea" name="descripcion_ver" length="<?php echo $lentextarea;?>"></textarea>
+		            <label for="descripcion_ver">Descipción de version</label>
+	          	</div>
+	        	<div class="col col s12 m12 l12">
+                  <label for="sistema">Sistema*</label>
+                  <select class="error browser-default" id="sistemaContent" name="sistema" class="browser-default sistema">
+                    
+                  </select>
+                  <div class="input-field">
+                      <div class="errorTxt6"></div>
+                  </div>
+                  <hr>
+                </div>
+				  	
+		  	<br>
+		  	<br>
+		  	<br>
+		</form>
+		<a class="waves-effect waves-light btn modal-trigger" name="subir_Version" >Subir Version</a>
+		<a  href="v.php" class="waves-effect waves-light btn">Volver</a>
+
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal LoadModal">
+		  <div class="modal-content">
+		    <h4>Cargando</h4>
+		    <img src="img/loading.gif" class="responsive-img">
+		  </div>
+		  <div class="modal-footer">
+		    
+		  </div>
+		</div>
+		<!-- end modal -->
+	</div>
+	</main>
+
+

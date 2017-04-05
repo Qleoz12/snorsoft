@@ -1,0 +1,260 @@
+<main class="container">
+	
+    <!-- cuerpo del formulario -->
+    <section class="row"> 
+                <div class="row">
+                <form id="formEmpresa" enctype="multipart/form-data"  class="col s12">
+                  
+                                        <div class="input-field col s12">
+                                            <label for="nombre_error">Nombre Empresa*</label>
+                                            <input id="nombre_error" placeholder="" name="nombre_error" type="text" data-error=".errorTxt1">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <label for="E_error">Ubicación*</label>
+                                          <input id="E_error" placeholder=""   type="text" name="E_error" data-error=".errorTxt2">
+                                          <div class="errorTxt2"></div>
+                                        </div>
+                                        <div class="col s12">
+                                        		<label for="">Servicios Prestados*</label>
+                                        		<br>
+                                            	<input type="checkbox" class="filled-in" id="Acueducto"  />
+                        											<label for="Acueducto">Acueducto</label>
+
+                        											<input type="checkbox" class="filled-in" id="Alcantarillado"  />
+                        											<label for="Alcantarillado">Alcantarillado</label>
+
+                        											<input type="checkbox" class="filled-in" id=""  />
+      											                  <label for="Aseo">Aseo</label>
+                                        </div> 
+                                        <div class="input-field col s12">
+                                          <label for="E_error">Nombre Gerente*</label>
+                                          <input id="E_error" placeholder=""   type="text" name="E_error" data-error=".errorTxt2">
+                                          <div class="errorTxt2"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <label for="E_error">Direccion*</label>
+                                          <input id="E_error" placeholder=""   type="text" name="E_error" data-error=".errorTxt2">
+                                          <div class="errorTxt2"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <label for="E_error">Teléfono*</label>
+                                          <input id="E_error" placeholder=""   type="text" name="E_error" data-error=".errorTxt2">
+                                          <div class="errorTxt2"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <label for="E_error">Cantidad de Asistentes*</label>
+                                          <input id="E_error" placeholder=""   type="text" name="E_error" data-error=".errorTxt2">
+                                          <div class="errorTxt2"></div>
+                                        </div>
+
+                                        <hr>
+                                        <div class="row">
+                                        <h5>Aspectos institucionales</h5>
+                                        <div class="input-field col s12">
+                                          <p>La entidad es una dependencia del: </p>
+                                          <input type="checkbox" class="filled-in" id="municipio"  />
+                                          <label for="municipio">municipio</label>
+                                          <input type="checkbox" class="filled-in" id="independiente"  />
+                                          <label for="independiente">independiente</label>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="input-field col s12">
+                                          <p>Indicar si o no los siguientes datos</p>
+                                          
+                                          <p>Estratificación económica de usuarios:</p>
+                                            <p>
+                                              <input name="group1" type="radio" id="si" />
+                                              <label for="si">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group1" type="radio" id="no" />
+                                              <label for="no">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Tarifas estructuradas para micromedición</p>
+                                            <p>
+                                              <input name="group2" type="radio" id="si2" />
+                                              <label for="si2">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group2" type="radio" id="no2" />
+                                              <label for="no2">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Manejan Subsidios</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                        
+                                        <!--  -->
+                                        <div class="input-field col s12">
+                                          <h5>Aspectos Técnicos</h5>
+                                          <p>Hay micromedidores </p>
+                                          <p>
+                                              <input name="group2" type="radio" id="si2" />
+                                              <label for="si2">SI</label>
+                                          </p>
+                                          <p>
+                                              <input name="group2" type="radio" id="no2" />
+                                              <label for="no2">NO</label>
+                                          </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Dispone de planos de las redes</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Dispone de personal, herramientas y controles para los mantenimientos de redes.</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Hay procedimientos para seguimiento y control de calidad del agua</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Existe un sistema técnico de disposición final de residuos sólidos</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+
+                                        <!--  -->
+                                        <div class="input-field col s12">
+                                          <h5>ASPECTOS ADMINISTRATIVOS</h5>
+                                          <p>Hay planta de personal</p>
+                                          <p>
+                                              <input name="group2" type="radio" id="si2" />
+                                              <label for="si2">SI</label>
+                                          </p>
+                                          <p>
+                                              <input name="group2" type="radio" id="no2" />
+                                              <label for="no2">NO</label>
+                                          </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Existe una estructura orgánica de la entidad</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Hay contratos de trabajo y afiliaciones al régimen de seguridad social</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                       
+                                       <!--  -->
+                                        <div class="input-field col s12">
+                                          <h5>ASPECTOS COMERCIALES</h5>
+                                          <p>Existen programas de recaudo</p>
+                                          <p>
+                                              <input name="group2" type="radio" id="si2" />
+                                              <label for="si2">SI</label>
+                                          </p>
+                                          <p>
+                                              <input name="group2" type="radio" id="no2" />
+                                              <label for="no2">NO</label>
+                                          </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Existen controles para el no pago</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                        <div class="input-field col s12">
+                                          <p>Existen informes de  agua producida y facturada</p>
+                                            <p>
+                                              <input name="group3" type="radio" id="si3" />
+                                              <label for="si3">SI</label>
+                                            </p>
+                                            <p>
+                                              <input name="group3" type="radio" id="no3" />
+                                              <label for="no3">NO</label>
+                                            </p>
+                                        </div>
+                                      </div><!-- endrow  -->
+                                      <hr>
+                                      <div class="row">
+                                      <h5>Persona que Diligencia:</h5>
+                                        <div class="input-field col s12">
+                                            <label for="nombre_error">Nombre y appelidos*</label>
+                                            <input id="nombre_error" placeholder="" name="nombre_error" type="text" data-error=".errorTxt1">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <label for="nombre_error">Cargo empresa*</label>
+                                            <input id="nombre_error" placeholder="" name="nombre_error" type="text" data-error=".errorTxt1">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <label for="nombre_error">Telefono*</label>
+                                            <input id="nombre_error" placeholder="" name="nombre_error" type="text" data-error=".errorTxt1">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                      </div>
+                    </form> 
+                    </div><!-- end row -->
+
+
+        <!-- buttons for actions -->
+        <div>
+          <a class="waves-effect waves-light btn" name="subir_log" >subir</a>
+          <a class="waves-effect waves-light btn">volver</a>
+        </div>
+    </section>
+    
+
+</main>

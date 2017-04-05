@@ -1,0 +1,31 @@
+<main class="container">
+        <!-- seccion de botones-->
+        <section class="row">
+            <h4> Modificar Sistema</h4>
+           <form id="formSistems" enctype="multipart/form-data" >
+                                        <!-- id -->
+                                        <div class="input-field col s12 m12 l12 hide">
+                                            <input name="id_sistems"  value="<?php echo $id?>">
+                                        </div>
+                                        <div class="input-field col s12 m12 l12">
+                                            <label for="nombre_sistema">Nombre sistema*</label>
+                                            <input id="nombre_sistema" placeholder="" name="nombre_sistema" type="text" data-error=".errorTxt1" value="<?php echo $nombre?>">
+                                            <div class="errorTxt1"></div>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <textarea id="descripcion_sistema" name="descripcion_sistema" class="materialize-textarea validate"  length="400" data-error=".errorTxt7"><?php echo $descripcion?></textarea>
+                                            <label for="descripcion_sistema">Descripcion*</label>
+                                            <div class="errorTxt7"></div>
+                                        </div>
+
+                                                                   
+
+            </form>
+        </section>
+        <br><br>
+        <section class="row">
+            <a class="waves-effect waves-light btn " name="update_sistems">Subir</a>
+            <a class="waves-effect waves-light btn">volver</a>
+        </section>
+        
+</main>
