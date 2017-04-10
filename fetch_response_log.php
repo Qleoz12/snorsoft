@@ -13,9 +13,9 @@ if( isset($_POST['id_response']) and isset($_POST['id_sis']))
 		{
 			
 			$mysqli=con();	
-		  	$results = $mysqli->prepare("SELECT id_log_sol,nombre_sol,fecha_sol,descripcion_sol,fecha_registro_sol FROM snor_log_soluciones where id_error='$id_error'");
+		  	$results = $mysqli->prepare("SELECT id_log_sol,nombre_sol,fecha_sol,descripcion_sol,fecha_registro_sol,name_file_sol,folder_files_sol FROM snor_log_soluciones where id_error='$id_error'");
 		  	$results->execute();
-		  	$results->bind_result($id, $name, $created_at,$descripcion,$fecha_registro_sol); //bind
+		  	$results->bind_result($id, $name, $created_at,$descripcion,$fecha_registro_sol,$name_file_sol,$folder_files_sol); //bind
 		  	//Display records fetched from database.
 			
 			
@@ -41,8 +41,18 @@ if( isset($_POST['id_response']) and isset($_POST['id_sis']))
 				echo				'<td>'.substr($fecha_registro_sol,0,10).'</a></td>
 									</tr>';
 				    echo 			'</table>';
-				   	echo 			"<h4>Descripcion de solucion</h4>";
+				   	echo 			"<h5>Descripcion de solucion</h5>";
 				   	echo			"<p>".$descripcion."</p>";
+				   	echo 			"<h5>Archivos Adjuntos</h5>";
+				   	echo			"<p>";
+				   					$log_directory ="files_sol/".$folder_files_sol;
+				   					foreach (glob($log_directory.'/*.*') as $file) 
+				   					{
+				   						# code...
+				   						$file_name=substr($file, strrpos( $file, '/' ) + 1 );
+				   						echo "<a href=./download_files_sol.php?id=".$id."&filename=".$file_name.">".$file_name."</a> <br>";
+				   					}	
+				   	echo             "</p>";
 				    echo '		</div> <!-- end collapsible-body-->
 				          </li>';
 		 	 }

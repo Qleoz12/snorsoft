@@ -276,6 +276,10 @@ $('.datepicker').pickadate({
 //------------------------------------------------------------------------------------------------------//
 // diseño de cargue de imagenes
  
+
+//------------------------------------------------------------------------------------------------------//
+    //Cargue de imagenes para crear log de errores 
+//------------------------------------------------------------------------------------------------------//
 //indirect ajax
         //file collection array
         var fileCollection = new Array();
@@ -319,13 +323,37 @@ $('.datepicker').pickadate({
             fileCollectionD.unshift(index);
             
         });
+//------------------------------------------------------------------------------------------------------//
+    //Cargue de archivos para soluciones a log de errores 
+//------------------------------------------------------------------------------------------------------//
+//indirect ajax
+       
+//file collection array
+        var fileCollection_sol = new Array();
+        //file collection array the files to delete
+        var fileCollectionD_sol = new Array();
+        $('#files_sol').on('change',function(e)
+        {
+            var files = e.target.files;
+            $.each(files, function(i, file){
+                fileCollection_sol.push(file);
+                var index=fileCollection_sol.indexOf(file);
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e){
+                    var template ='<div>'+'<div class="chip" data-index="'+index+'">'+file.name+'<i class="close material-icons">close</i></div>'+'</div>';
+                    $('#files_sol-to-upload').append(template);
+                                        
+                };
+            });            
+        });
 
-//     }); 
-
-
-
-
-
+        // quitar imagenes cargadas por error
+        $("div[name='files_sol-to-upload']").on('click', "div[class='chip']", function (e) {            
+            var index=$(this).data("index");
+            fileCollectionD_sol.unshift(index);
+            
+        });
 
 // //------------------------------------------------------------------------------------------------------//
 // //------------------------------------------------------------------------------------------------------//
@@ -345,19 +373,33 @@ $( "a[name='subir_response']").click(function()
     form_Data.append("id_sistema",id_sis);
     displayDate = (myDate.getDate())+"-"+(myDate.getMonth()+1)+"-"+ myDate.getFullYear()+'--'+myDate.getHours()+'!'+myDate.getMinutes()+'!'+myDate.getSeconds();        
     form_Data.append("fechaactual",displayDate);
+    fileCollectionD_sol.sort(sortNumber);
+    fileCollectionD_sol.reverse();
+    // process to delete imges remove by user
+    for(index in fileCollectionD_sol)
+    {   
+        fileCollection_sol.splice(fileCollectionD_sol[index],1);   
+    }
+    // delete the files loaded from page
+    form_Data.delete("files_sol[]");
+    //load the images for to upload
+    for(index in fileCollection_sol)
+    {
+        form_Data.append("files_sol[]",fileCollection_sol[index]);
+    }
+    for(var pair of form_Data.entries()) 
+    {
+          console.log(pair[0]+ ', ' + pair[1]);
+    }
+    console.log(id+"----"+id_sis);
     var request = new XMLHttpRequest();
     request.open('post', 'pro_response_log.php', false);
     request.send(form_Data);
-    // for(var pair of form_Data.entries()) 
-    // {
-    //      console.log(pair[0]+ ', ' + pair[1]);
-    // }
-    console.log(id+"----"+id_sis);
     $( ".Form_R").fadeOut( "slow" );
     $( "a[name='open_form']").fadeIn( "slow" );
-
     $(".lista_response").load("fetch_response_log.php",{"id_response":id,"id_sis":id_sis },function(){});
 });
+
 $( "a[name='return_response']").click(function()
     {
      window.location.replace("log.php");   

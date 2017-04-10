@@ -320,4 +320,17 @@ function get_doc($id){
 	}
 	return $image;
 }
+
+//-------------------------Log de errores(soluciones)-----------------////////////////
+//inser a new document
+
+function get_file_sol($id){
+	$file_sol = null;
+	$con = con();
+	$query=$con->query("select * from snor_log_soluciones where id_log_sol=$id");
+	while($r=$query->fetch_object()){
+		$file_sol = $r;
+	}
+	return $file_sol;
+}
 ?>

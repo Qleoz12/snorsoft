@@ -134,8 +134,31 @@ $firephp->log(array(1, 2, array(0 => "A", "Z" => "Y"), 4, 5));
 
 
 
+
+
+
 //$resultado=get_state(1);
 //echo ($resultado);
+
+$files = array_slice(scandir('files_sol\\2-6-4-2017--13!31!41'), 2);
+$files_d=array();
+//print_r($files);
+foreach ($files as $value)
+		{
+			$files_d[]=$value;	
+		}
+print_r($files_d);
+$zipname = 'archivos.zip';
+$zip = new ZipArchive;
+$zip->open($zipname, ZipArchive::CREATE);
+foreach ($files_d as $file) {
+	$zip->addFile($file);
+}
+$zip->close();
+header('Content-Type: application/zip');
+header('Content-disposition: attachment; filename='.$zipname);
+header('Content-Length: ' . filesize($zipname));
+readfile($zipname);
  ?>
 <!--  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>

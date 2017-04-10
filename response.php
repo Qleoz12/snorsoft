@@ -8,7 +8,7 @@
 }
 else
 {
-	
+	include 'html/cabecera.html';
 	include 'html/response.html';
 
 }
